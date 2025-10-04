@@ -144,7 +144,7 @@ Just set the environment variables in your dashboard or `.env` file.
 
 **Abdul Rehman**  
 Backend Developer | REST API Specialist | MERN Stack  
-📧 Email: your-email@example.com  
+📧 Email: abdulrehmansonu34@gmail.com 
 🌍 Portfolio: [abdulrehman.xyz](https://abdulrehman.xyz)  
 🐙 GitHub: [@abdulrehmansonu](https://github.com/abdulrehmansonu)
 
