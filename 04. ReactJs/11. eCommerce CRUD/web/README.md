@@ -1,70 +1,124 @@
-# Getting Started with Create React App
+# 🛍️ E-Commerce CRUD API — Node.js, Express & MongoDB
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Node.js](https://img.shields.io/badge/Node.js-18-green?logo=node.js)](https://nodejs.org)
+[![Express.js](https://img.shields.io/badge/Express-Framework-lightgrey?logo=express)](https://expressjs.com)
+[![MongoDB](https://img.shields.io/badge/MongoDB-Database-green?logo=mongodb)](https://mongodb.com)
+[![License](https://img.shields.io/badge/License-ISC-yellow)](LICENSE)
 
-## Available Scripts
+A **RESTful E-Commerce CRUD API** built with **Node.js, Express, and MongoDB (Mongoose)**.  
+Supports **User Authentication (JWT)**, **Product Management**, and **CRUD Operations** with secure token-based access.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+✅ User Sign-Up / Login / Logout (JWT Auth)  
+✅ Password Hashing using bcrypt-inzi  
+✅ Cookie-based token management (HTTP-only cookies)  
+✅ CRUD for Products: Create, Read, Update, Delete  
+✅ MongoDB connection handling with real-time connection status logs  
+✅ Secure, scalable backend suitable for full-stack e-commerce projects  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🧠 Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Backend:** Node.js, Express.js  
+- **Database:** MongoDB (via Mongoose ORM)  
+- **Security:** JSON Web Tokens (JWT), bcrypt-inzi  
+- **Utilities:** cookie-parser, cors  
+- **Dev Tooling:** nodemon  
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## ⚙️ Installation & Setup
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Clone the repository**
+   ```bash
+   git clone <your-repo-url>
+   cd ecommerce-crud
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-### `npm run eject`
+3. **Set up environment variables**
+   Create a `.env` file in the project root:
+   ```bash
+   MONGODBURI=your_mongodb_connection_string
+   SECRET=your_jwt_secret
+   PORT=5001
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. **Run the server**
+   ```bash
+   npm run dev
+   ```
+   or for production:
+   ```bash
+   npm start
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📦 API Endpoints
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+| Method | Endpoint | Description |
+|--------|-----------|-------------|
+| **POST** | `/signup` | Register a new user |
+| **POST** | `/login` | Login and receive JWT token |
+| **POST** | `/logout` | Logout and clear cookie |
+| **GET** | `/profile` | Get logged-in user details |
+| **GET** | `/products` | Fetch all products |
+| **GET** | `/product/:id` | Fetch a product by ID |
+| **POST** | `/product` | Add a new product |
+| **PUT** | `/product/:id` | Update existing product |
+| **DELETE** | `/product/:id` | Delete a product |
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🧪 Example JSON for Product
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```json
+{
+  "name": "Nike Air Zoom",
+  "description": "High performance running shoes",
+  "price": "150",
+  "code": "NK001"
+}
+```
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🧩 Project Structure
 
-### Analyzing the Bundle Size
+```
+ecommerce-crud/
+├── server.mjs
+├── package.json
+├── package-lock.json
+├── .env
+└── README.md
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 🔒 Security Notes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- All protected routes require a valid JWT in cookies.  
+- HTTP-only cookies prevent XSS attacks.  
+- Passwords are stored in hashed form using `bcrypt-inzi`.
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🧑‍💻 Author
 
-### Deployment
+**Abdul Rehman Sonu**  
+Backend Developer | MERN Stack Enthusiast  
+🔗 [GitHub](https://github.com/abdulrehmansonu) • [LinkedIn](https://www.linkedin.com/in/abdulrehmansonu/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+⭐ *If you find this project helpful, please star the repo!*
