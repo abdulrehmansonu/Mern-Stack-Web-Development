@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+# 🌦️ WeatherApp — React Weather Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![React](https://img.shields.io/badge/React-18-blue?logo=react)](https://react.dev)
+[![Axios](https://img.shields.io/badge/Axios-HTTP%20Client-green)](https://axios-http.com)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-Responsive%20UI-purple?logo=bootstrap)](https://getbootstrap.com)
+[![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
 
-## Available Scripts
+A clean and responsive **React Weather App** that displays real-time weather conditions and a 5-day forecast using a public weather API. Built with ⚛️ React, 📡 Axios, and 🎨 Bootstrap.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+✅ Search any city and instantly get weather details  
+✅ Displays temperature, humidity, and conditions  
+✅ 5-day weather forecast with icons  
+✅ Fully responsive design (Bootstrap)  
+✅ Uses Axios for API calls and Moment.js for date formatting  
+✅ Simple, modern, and mobile-friendly UI  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🧠 Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Frontend:** React (CRA)
+- **Styling:** Bootstrap, React-Bootstrap
+- **API Calls:** Axios  
+- **Date Formatting:** Moment.js  
+- **Environment Management:** `.env` variables
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## ⚙️ Installation & Setup
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/abdulrehmansonu/Mern-Stack-Web-Development/tree/main/04.%20ReactJs/6.%20React%20Weather%20App
+   cd weatherapp
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-### `npm run eject`
+3. **Add your API key**
+   Create a `.env` file in the root folder and add:
+   ```bash
+   REACT_APP_WEATHER_KEY=your_api_key_here
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. **Run the app**
+   ```bash
+   npm start
+   ```
+   The app will run at 👉 `http://localhost:3000`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🧩 Folder Structure
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+weatherapp/
+├── src/
+│   ├── components/
+│   │   ├── WeatherCard.js
+│   │   ├── Forecast.js
+│   ├── App.js
+│   ├── index.js
+│   ├── App.css
+│
+├── public/
+│   ├── index.html
+│
+├── .env
+├── package.json
+└── README.md
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 💡 Future Enhancements
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- 🌍 Add geolocation-based weather detection  
+- 🕒 Add hourly forecast charts  
+- 💾 Save recent searches in LocalStorage  
+- 🧪 Add unit tests using Jest / React Testing Library  
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🧑‍💻 Author
 
-### Analyzing the Bundle Size
+**Abdul Rehman Sonu**  
+Frontend Developer | React Enthusiast  
+🔗 [LinkedIn] (https://www.linkedin.com/in/abdulrehmansonu/) • [GitHub](https://github.com/abdulrehmansonu/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 📜 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This project is licensed under the **MIT License** — feel free to use and modify it for your own learning or projects.
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+⭐ *If you like this project, don’t forget to give it a star on GitHub!*
