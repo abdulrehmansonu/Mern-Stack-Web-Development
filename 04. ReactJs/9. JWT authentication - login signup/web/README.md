@@ -1,70 +1,124 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# JWT Authentication System (React + Node + MongoDB)
 
-## Available Scripts
+![Node.js](https://img.shields.io/badge/Backend-Node.js-green?style=for-the-badge)
+![Express.js](https://img.shields.io/badge/Framework-Express.js-lightgrey?style=for-the-badge)
+![MongoDB](https://img.shields.io/badge/Database-MongoDB-brightgreen?style=for-the-badge)
+![React](https://img.shields.io/badge/Frontend-React-blue?style=for-the-badge)
+![JWT](https://img.shields.io/badge/Auth-JWT-yellow?style=for-the-badge)
 
-In the project directory, you can run:
+A complete **JWT-based Authentication System** built with the **MERN Stack**.  
+Users can **Sign Up**, **Log In**, and access **protected dashboard pages**.  
+Authentication tokens are stored using **HTTP-only cookies** for enhanced security.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Key Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- User **Signup & Login**
+- Password hashing using **bcrypt-inzi**
+- **JWT Authentication** with expiration
+- **HTTP-only Cookies** for secure token handling
+- Protected routes (only authenticated users can access dashboard/profile)
+- Logout functionality
+- Clean and modular code structure
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Tech Stack 
 
-### `npm run build`
+| Layer | Technology |
+|------|------------|
+| Frontend | React.js, React Router, Fetch/Axios |
+| Backend | Node.js, Express.js |
+| Database | MongoDB + Mongoose |
+| Authentication | JWT (jsonwebtoken) |
+| Password Security | bcrypt-inzi |
+| Cookies | cookie-parser |
+| CORS Handling | cors |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📁 Folder Structure
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+Project/
+│
+├── backend/
+│   ├── server.mjs
+│   ├── package.json
+│   ├── ...
+│
+└── frontend/
+    ├── src/
+    │   ├── components/
+    │   │   ├── Login.jsx
+    │   │   ├── Signup.jsx
+    │   │   └── Dashboard.jsx
+    │   └── App.js
+    └── package.json
+```
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📌 API Routes
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/signup` | Register a new user |
+| POST | `/login` | Authenticate user + issue JWT cookie |
+| POST | `/logout` | Clear session cookie |
+| GET | `/profile` | Get logged-in user's profile (Protected) |
+| GET | `/users` | Get all users (Protected) |
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🔐 Authentication Workflow
 
-## Learn More
+```
+User Login →
+Password Verified →
+JWT Created →
+Token Stored in HTTP-only Cookie →
+Protected Routes Check Token →
+Access Granted ✅
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## ▶️ How to Run the Project
 
-### Code Splitting
+### 1) Run Backend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+cd backend
+npm install
+npm run dev
+```
 
-### Analyzing the Bundle Size
+Set environment variables:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
+MONGODBURI=your-mongodb-connection-string
+SECRET=your-jwt-secret
+```
 
-### Making a Progressive Web App
+### 2) Run Frontend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+cd frontend
+npm install
+npm start
+```
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## ✅ Security Note
 
-### Deployment
+Using **HTTP-only cookies** prevents JavaScript from accessing JWT token, reducing risk of **XSS attacks**  
+and making the app more secure than localStorage-based authentication.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## © License
+This project is open-source. Free to use & customize.
